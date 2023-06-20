@@ -6,6 +6,7 @@ import {
 	createServerData$,
 	redirect,
 } from "solid-start/server";
+import { Loader } from "~/components/loading";
 import { createUserSession, getUser, login } from "~/db/session";
 
 const validateUsername = (username: unknown) => {
@@ -112,9 +113,11 @@ const Login = () => {
 						</Show>
 						<button
 							type='submit'
-							class='w-full bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 py-2 rounded'>
+							class='w-full bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 py-2 rounded flex justify-center items-center'>
 							<Show when={data()} fallback=''>
-								<Show when={!loggingIn.pending} fallback={<>Loading...</>}>
+								<Show
+									when={!loggingIn.pending}
+									fallback={<Loader color='light' size='sm' />}>
 									Login
 								</Show>
 							</Show>
