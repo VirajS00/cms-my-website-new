@@ -2922,6 +2922,11 @@ solid-headless@0.13.1:
   dependencies:
     solid-use "^0.6.2"
 
+solid-icons@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-1.0.8.tgz#9f3aaf47f1490aae7a257e23be64dc1d8fbbe0bf"
+  integrity sha512-7aQGNjM5ZAGlE25s4APE+2QEQUyltqsTuhfO0OhYZaH2wbY0ZAqL7qRQJPMN98qhoIfroYRNEi/0l7UJN902MA==
+
 solid-js@^1.7.2:
   version "1.7.6"
   resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.7.6.tgz#5e3389c87cbc3256b76e82402b3052ded6648482"

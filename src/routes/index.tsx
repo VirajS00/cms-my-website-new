@@ -1,27 +1,24 @@
 import { useRouteData } from "solid-start";
 import { createServerData$, redirect } from "solid-start/server";
 import { Header } from "~/components/header";
+import { Layout } from "~/components/layout";
 import { getUser } from "~/db/session";
 
 export const routeData = () =>
-	createServerData$(async (_, { request }) => {
-		const user = await getUser(request);
+  createServerData$(async (_, { request }) => {
+    const user = await getUser(request);
 
-		if (!user) {
-			throw redirect("/login");
-		}
+    if (!user) {
+      throw redirect("/login");
+    }
 
-		return user;
-	});
+    return user;
+  });
 
 const Home = () => {
-	const user = useRouteData<typeof routeData>();
+  const user = useRouteData<typeof routeData>();
 
-	return (
-		<main class='w-full space-y-2'>
-			<Header user={user} />
-		</main>
-	);
+  return <Layout user={user}>d9jjdij</Layout>;
 };
 
 export default Home;
