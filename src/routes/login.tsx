@@ -24,7 +24,7 @@ const validatePassword = (password: unknown) => {
 export const routeData = () => {
   return createServerData$(async (_, { request }) => {
     if (await getUser(request)) {
-      throw redirect("/");
+      throw redirect("/home");
     }
     return {};
   });

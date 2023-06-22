@@ -3,7 +3,7 @@ import { NavItem } from "~/types/nav-item";
 export const sideNavItems: NavItem[] = [
   {
     label: "Home",
-    link: "/",
+    link: "/home",
   },
   {
     label: "Photos",
@@ -14,11 +14,11 @@ export const sideNavItems: NavItem[] = [
       },
       {
         label: "Nature",
-        link: "photos/nature",
+        link: "/photos/nature",
       },
       {
         label: "Macro",
-        link: "photos/macro",
+        link: "/photos/macro",
       },
     ],
   },

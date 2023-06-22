@@ -1,5 +1,6 @@
-import { useRouteData, redirect as redirectClient } from "solid-start";
+import { useParams, useRouteData } from "solid-start";
 import { createServerData$, redirect } from "solid-start/server";
+import { Layout } from "~/components/layout";
 import { getUser } from "~/db/session";
 
 export const routeData = () =>
@@ -10,15 +11,14 @@ export const routeData = () =>
       throw redirect("/login");
     }
 
-    throw redirect("/home");
+    return user;
   });
 
 const Home = () => {
   const user = useRouteData<typeof routeData>();
+  const params = useParams();
 
-  user();
-
-  return <></>;
+  return <Layout user={user}>{params.category}</Layout>;
 };
 
 export default Home;
