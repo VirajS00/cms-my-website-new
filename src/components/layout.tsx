@@ -7,9 +7,9 @@ export const Layout: ParentComponent<{
   user: Resource<UserReturnType | undefined>;
 }> = (props) => {
   return (
-    <div class="h-screen">
+    <div>
       <Header user={props.user} />
-      <div class="grid grid-cols-[250px_1fr] h-[calc(100vh-80px)]">
+      <div class="grid grid-cols-[250px_1fr] h-[calc(100vh-90px)]">
         <SideNav />
         <main class="w-full space-y-2 p-4 overflow-y-auto">
           {props.children}
