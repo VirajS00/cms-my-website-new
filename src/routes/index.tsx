@@ -10,7 +10,7 @@ export const routeData = () =>
       throw redirect("/login");
     }
 
-    throw redirect("/home");
+    throw redirect("/home/main");
   });
 
 const Home = () => {

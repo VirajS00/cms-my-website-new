@@ -3,35 +3,35 @@ import { NavItem } from "~/types/nav-item";
 export const sideNavItems: NavItem[] = [
   {
     label: "Home",
-    link: "/home",
+    link: "/home/main",
   },
   {
     label: "Photos",
     subItems: [
       {
         label: "Abstract",
-        link: "/photos/abstract",
+        link: "/home/photos/abstract",
       },
       {
         label: "Nature",
-        link: "/photos/nature",
+        link: "/home/photos/nature",
       },
       {
         label: "Macro",
-        link: "/photos/macro",
+        link: "/home/photos/macro",
       },
     ],
   },
   {
     label: "Coding & Design",
-    link: "/codingDesign",
+    link: "/home/cd",
   },
   {
     label: "Videos",
-    link: "/videos",
+    link: "/home/videos",
   },
   {
     label: "Resources",
-    link: "/resource",
+    link: "/home/resources",
   },
 ];
