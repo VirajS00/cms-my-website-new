@@ -1,7 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from "solid-headless";
 import { RiArrowsArrowDropDownLine } from "solid-icons/ri";
 import { Component, For, Show } from "solid-js";
-import { A } from "solid-start";
+import { A, useLocation } from "solid-start";
 import { NavItem as NavItemType } from "~/types/nav-item";
 
 type Props = {
@@ -9,6 +9,8 @@ type Props = {
 };
 
 export const NavItem: Component<Props> = (props) => {
+  const location = useLocation();
+
   return (
     <>
       <Show
@@ -26,7 +28,13 @@ export const NavItem: Component<Props> = (props) => {
       </Show>
       <Show when={props.navItem.subItems && props.navItem.subItems.length > 0}>
         <li>
-          <Disclosure defaultOpen={false} as="div">
+          <Disclosure
+            defaultOpen={false}
+            isOpen={props.navItem.subItems?.some(
+              (x) => x.link === location.pathname
+            )}
+            as="div"
+          >
             {({ isOpen }) => (
               <>
                 <DisclosureButton
@@ -35,6 +43,7 @@ export const NavItem: Component<Props> = (props) => {
                 >
                   {props.navItem.label}
                   <RiArrowsArrowDropDownLine
+                    size={24}
                     classList={{ "rotate-180": isOpen() }}
                   />
                 </DisclosureButton>

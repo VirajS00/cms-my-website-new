@@ -2,6 +2,10 @@ import { NavItem } from "~/types/nav-item";
 
 export const sideNavItems: NavItem[] = [
   {
+    label: "Home",
+    link: "/",
+  },
+  {
     label: "Photos",
     subItems: [
       {
