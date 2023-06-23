@@ -11,7 +11,7 @@ export const Layout: ParentComponent<{
       <Header user={props.user} />
       <div class="grid grid-cols-[250px_1fr] h-[calc(100vh-90px)]">
         <SideNav />
-        <main class="w-full space-y-2 p-4 overflow-y-auto">
+        <main class="relative w-full space-y-2 p-4 overflow-y-auto pb-16">
           {props.children}
         </main>
       </div>

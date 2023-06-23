@@ -54,7 +54,7 @@ export const NavItem: Component<Props> = (props) => {
                         <li class="relative">
                           <A
                             href={subItem?.link ?? ""}
-                            class="block py-0.5 hover:text-sky-700"
+                            class="block py-0.5 ml-2 hover:text-sky-700"
                             activeClass='text-sky-600 before:content-[""] before:absolute before:h-full before:border-l-2 before:border-sky-600 before:-left-2'
                           >
                             {subItem.label}

@@ -1,13 +1,7 @@
-import {
-  For,
-  Show,
-  Suspense,
-  createEffect,
-  createResource,
-  createSignal,
-} from "solid-js";
+import { For, Show, createEffect, createSignal } from "solid-js";
 import { Title, useParams, useRouteData } from "solid-start";
 import { Layout } from "~/components/layout";
+import { Loader } from "~/components/loading";
 import { Table, TableRow } from "~/components/table";
 import { isLoggedIn } from "~/helpers/is-logged-in";
 import { PhotosReturnType } from "~/types/photos-return-type";
@@ -34,7 +28,7 @@ const Home = () => {
     <>
       <Title>Photos - {params.category}</Title>
       <Layout user={user}>
-        <Show when={photos()} fallback={<>Loading...</>}>
+        <Show when={photos()} fallback={<Loader fullScreen />}>
           <Table
             tableColumns={[
               {

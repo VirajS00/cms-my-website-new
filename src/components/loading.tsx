@@ -3,9 +3,10 @@ import { Component } from "solid-js";
 type Props = {
   color?: "light" | "dark";
   size?: "lg" | "md" | "sm";
+  fullScreen?: boolean;
 };
 
-export const Loader: Component<Props> = (props) => {
+const JustLoader: Component<Props> = (props) => {
   const color = props.color ?? "dark";
   const size = props.size ?? "md";
 
@@ -20,5 +21,17 @@ export const Loader: Component<Props> = (props) => {
         "border h-6 w-6": size === "sm",
       }}
     ></div>
+  );
+};
+
+export const Loader: Component<Props> = (props) => {
+  if (!props.fullScreen) {
+    return <JustLoader {...props} />;
+  }
+
+  return (
+    <div class="h-full w-full flex justify-center items-center">
+      <JustLoader {...props} />
+    </div>
   );
 };
