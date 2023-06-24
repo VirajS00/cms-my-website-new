@@ -23,7 +23,7 @@ export const Header: Component<{
     ?.last_name.charAt(0)}`;
 
   return (
-    <header class="bg-gray-200 border-b border-b-gray-300 shadow flex py-3 items-center justify-between px-6">
+    <header class="bg-gray-200 border-b border-b-gray-300 shadow flex py-3 items-center justify-between px-6 z-[1000] relative">
       <h1 class="text-xl font-bold text-slate-500 font-mono">
         Viraj's Admin Dashbaord
       </h1>

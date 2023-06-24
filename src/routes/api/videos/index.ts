@@ -36,5 +36,6 @@ export const GET = async ({}: APIEvent) => {
     return json(returnData);
   } catch (err) {
     console.log(err);
+    return json(err);
   }
 };

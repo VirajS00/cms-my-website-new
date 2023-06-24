@@ -16,10 +16,14 @@ const Home = () => {
   );
 
   onMount(async () => {
-    const req = await fetch("/api/videos");
-    const json = (await req.json()) as VideoEndpointResponse[];
+    try {
+      const req = await fetch("/api/videos");
+      const json = (await req.json()) as VideoEndpointResponse[];
 
-    setVideos(json);
+      setVideos(json);
+    } catch (err) {
+      console.error(err);
+    }
   });
 
   return (
