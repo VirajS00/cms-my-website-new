@@ -7,29 +7,29 @@
   },
   "type": "module",
   "devDependencies": {
-    "@types/babel__core": "^7.20.0",
-    "@types/debug": "^4.1.7",
-    "@types/node": "^18.11.18",
-    "esbuild": "^0.14.54",
-    "postcss": "^8.4.21",
-    "rollup": "^3.10.0",
-    "solid-start-node": "^0.2.19",
-    "typescript": "^4.9.4",
-    "vite": "^4.1.4",
+    "@types/babel__core": "^7.20.1",
+    "@types/debug": "^4.1.8",
+    "@types/node": "^20.4.1",
+    "esbuild": "^0.18.11",
+    "postcss": "^8.4.25",
+    "rollup": "^3.26.2",
+    "solid-start-node": "^0.2.26",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.2",
     "tailwindcss": "3.3.2",
     "autoprefixer": "10.4.14",
     "solid-start-vercel": "0.2.26"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.2",
+    "@solidjs/meta": "^0.28.5",
     "@solidjs/router": "^0.8.2",
-    "solid-js": "^1.7.2",
+    "solid-js": "^1.7.7",
     "solid-start": "^0.2.26",
-    "undici": "^5.15.1",
+    "undici": "^5.22.1",
     "dotenv": "16.3.1",
-    "mysql2": "3.4.0",
+    "mysql2": "3.5.0",
     "solid-headless": "0.13.1",
-    "solid-icons": "1.0.8"
+    "solid-icons": "1.0.11"
   },
   "engines": {
     "node": ">=16"
